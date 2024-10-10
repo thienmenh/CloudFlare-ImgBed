@@ -153,7 +153,7 @@ async function getFileContent(request, max_retries = 2) {
             if (response.ok || response.status === 304) {
                 return response;
             } else if (response.status === 404) {
-                return new Response('Error: Image Not Found', { status: 404 });
+                return new Response('Lỗi: Không tìm thấy hình ảnh', { status: 404 });
             } else {
                 retries++;
             }
